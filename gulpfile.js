@@ -32,6 +32,13 @@ function serveSass() {
     .pipe(browserSync.stream());
 }
 
+function imagemin(done) {
+  src('img/**/**.{png,jpg,jpeg}').pipe(dest('dist/img/'));
+  src('img/**/**.svg').pipe(dest('dist/img/'));
+
+  done();
+}
+
 function buildCSS(done) {
   src('css/**/**.css')
     .pipe(cleanCSS({ compatibility: 'ie8' }))
@@ -72,4 +79,4 @@ function fonts(done) {
 }
 
 exports.serve = bs; // server
-exports.build = series(buildCSS, buildJS, html, php, fonts); // dist constructor
+exports.build = series(buildCSS, buildJS, html, php, fonts, imagemin); // dist constructor
