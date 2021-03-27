@@ -1,0 +1,34 @@
+.burger-menu
+  position: fixed
+  top: 0
+  left: -2000px
+  height: 100%
+  width: 40%
+  background-color: $dark
+  transition: .5s
+  opacity: 0
+  z-index: 998
+  box-shadow: 10px 10px 8px 0px rgba($darkblue, 0.2)
+  &--active
+    opacity: 1
+    left: 0
+  &__list
+    display: flex
+    flex-direction: column
+    align-items: center
+    list-style: none
+    &__title
+      color: $light !important
+    &__item
+      margin-top: 25px
+      font-family: 'Lato-Bold', sans-serif
+      font-size: 16px
+      line-height: 28px
+      text-decoration: none
+      text-transform: capitalize
+      color: $orange
+      transition: .5s
+      &:not(:first-of-type)
+        border-bottom: 1px solid $dark
+      &--active
+        color: $gray

@@ -3,7 +3,7 @@ const browserSync = require('browser-sync').create();
 const serveScss = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
-const minify = require('gulp-minify');
+const minifyjs = require('gulp-minify');
 const htmlmin = require('gulp-htmlmin');
 
 // Static server
@@ -42,7 +42,7 @@ function buildCSS(done) {
 function buildJS(done) {
   src(['js/**.js', '!js/**.min.js'])
     .pipe(
-      minify({
+      minifyjs({
         ext: {
           min: '.js',
         },

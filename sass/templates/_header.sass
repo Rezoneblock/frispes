@@ -1,1 +1,87 @@
-
+.header
+  padding: 60px 0
+  &__burger-menu
+    &__button
+      position: relative
+      z-index: 999
+      display: none
+      margin-top: -10px
+      margin-right: 20px
+      margin-left: 10px
+      &--active
+        span:nth-child(2)
+          transform: translateX(50px)
+          opacity: .2
+        span:nth-child(1)
+          transform: rotate(60deg) translateY(10px)
+        span:nth-child(3)
+          transform: rotate(-60deg) translateY(-10px)
+      &__line
+        position: absolute
+        width: 18px
+        height: 3px
+        background-color: $orange
+        transition: .5s
+        &:nth-child(1)
+          top: 0
+        &:nth-child(2)
+          top: 5px
+        &:nth-child(3)
+          top: 10px
+  &__list
+    position: relative
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    list-style: none
+    &__item
+      display: flex
+    &__title
+      display: flex
+      justify-content: center
+      &__link
+        font-family: 'PlayfairDisplay-Bold', sans-serif
+        font-weight: 700
+        font-size: 24px
+        line-height: 32px
+        color: $darkblue
+        text-decoration: none
+        transition: .5s
+    &__nav-list
+      display: flex
+      align-items: center
+      justify-content: space-between
+      &__item
+        font-family: 'Lato-Bold', sans-serif
+        font-size: 16px
+        line-height: 28px
+        text-decoration: none
+        text-transform: capitalize
+        color: $dark
+        transition: .5s
+        &--active, &:hover
+          color: $orange
+        &:not(:last-of-type)
+          margin-right: 40px
+    &__user
+      padding: 12px 24px
+      font-family: 'Lato-Bold', sans-serif
+      font-weight: 700
+      font-size: 16px
+      line-height: 19.2px
+      text-transform: capitalize
+      text-decoration: none
+      transition: .5s
+      &:hover
+        box-shadow: 0px 4px 16px rgba($orange, 0.5)
+    &__login
+      margin-right: 5px
+      background-color: $light
+      color: $orange
+      &:hover
+        background-color: $orange
+        color: $light
+    &__register
+      background-color: $orange
+      color: $light

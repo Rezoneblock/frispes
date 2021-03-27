@@ -1,0 +1,56 @@
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px)
+  .header
+    &__list
+      &__nav-list
+        &__item
+          &:not(:last-of-type)
+            margin-right: 20px
+/* Portrait tablets and medium desktops */
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px)
+  .header
+    padding: 25px 0
+    &__list
+      &__nav-list
+        &__item
+          font-size: 12px
+          &:not(:last-of-type)
+            margin-right: 10px
+      &__user
+        font-size: 12px
+/* Portrait tablets and small desktops */
+
+@media (min-width: 768px)
+  .burger-menu
+    display: none
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px)
+  .container
+    width: 95%
+  .header
+    padding: 25px 0
+    &__burger-menu
+      &__button
+        display: block
+    &__list
+      &__title
+        &__link
+          font-size: 16px
+          line-height: 28px
+      &__nav-list
+        display: none
+      &__user
+        font-size: 16px
+/* Landscape phones and portrait tablets */
+
+/* Landscape phones and smaller */
+@media (max-width: 480px)
+  .header
+    padding: 25px 0
+    &__list
+      &__user
+        padding: 6px 18px
+/* Landscape phones and smaller */
