@@ -13,6 +13,17 @@
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px)
+  .our-spaces
+    &__swiper
+      &-slide
+        &__space
+          &__hidden-content
+            &__title
+              font-size: 22px
+              line-height: 26px
+            &__description
+              font-size: 12px
+              line-height: 16px
   .header
     padding: 25px 0
     &__list
@@ -50,6 +61,36 @@
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px)
+  .our-spaces
+    &__content
+      &__heading
+        &__description
+          text-align: center
+    &__slider
+      &__arrows
+        margin: 0 auto
+        margin-top: 20px
+    &__swiper
+      &-slide
+        &__space
+          &:hover > &__button
+            font-size: 12px
+            line-height: 12px
+          &__button
+            padding: 18px 21px
+          &__hidden-content
+            justify-content: flex-start
+            &__img
+              right: 50%
+              top: 50%
+              transform: translate(50%, -50%)
+              opacity: 0.1
+            &__title
+              font-size: 22px
+              line-height: 26px
+            &__description
+              font-size: 12px
+              line-height: 16px
   .intro
     &__slider
       box-shadow: none
@@ -79,8 +120,67 @@
         font-size: 16px
 /* Landscape phones and portrait tablets */
 
+@media (max-width: 550px)
+  .section
+    padding-bottom: 60px
+  .our-spaces
+    padding-bottom: 140px
+    &__slider
+      margin-top: 20px
+    &__swiper
+      &-fraction
+        bottom: -60px !important
+      &-slide
+        &__space
+          &__hidden-content
+            &__title
+              font-size: 12px
+              line-height: 10px
+            &__description
+              font-size: 10px
+              line-height: 14px
+            &__img
+              display: none
+          &__button
+            padding: 12px 15px
+            bottom: 35px
+          &__title
+            font-size: 14px
+            line-height: 10px
+
 /* Landscape phones and smaller */
 @media (max-width: 480px)
+  .our-spaces
+    &__swiper
+      &-slide
+        flex-direction: column
+        &__space
+          margin-bottom: 20px
+          &__title
+            font-size: 20px
+            line-height: 22px
+          &__hidden-content
+            padding: 10px 2px
+          &:hover > &__button
+            font-size: 18px
+            line-height: 22px
+          &__button
+            max-width: 72px
+            padding: 28px 31px
+            bottom: 47px
+          &__hidden-content
+            justify-content: center
+            &__title
+              font-size: 32px
+              line-height: 41px
+            &__description
+              font-size: 18px
+              line-height: 28px
+            &__img
+              top: 50px
+              right: 50px
+              opacity: .2
+              display: block
   .section
     &__content
       &__name

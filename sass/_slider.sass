@@ -1,29 +1,11 @@
 .swiper
   &-scrollbar
-    width: 100px !important
     position: absolute
-    background-color: inherit !important
     z-index: 2
     margin-left: 50%
-    transform: translateX(-50%)
-    margin-bottom: 3.5%
+    left: 0 !important
+    transform: translateX(-58%)
     &__item
       position: absolute
       top: 50%
       transform: translateY(-50%)
-      width: 15px
-      height: 3px
-      background-color: rgba($light, 0.5)
-      &:nth-child(1)
-        left: 5%
-      &:nth-child(2)
-        left: 30%
-      &:nth-child(3)
-        left: 53%
-        // transform: translateX(-50%)
-      &:nth-child(4)
-        left: 78%
-    &-drag
-      border-radius: 0 !important
-      background-color: $orange !important
-      width: 25px !important
