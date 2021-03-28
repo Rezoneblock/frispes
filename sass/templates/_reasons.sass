@@ -1,0 +1,59 @@
+.reasons
+  padding-top: 40px
+  &__content
+    &__name
+      &__text
+        color: $light
+      &__line
+        background-color: $light
+    &__heading
+      flex-direction: column
+      &__description
+        &__text
+          color: $light
+          font-size: 20px
+          line-height: 30px
+      &__title
+        font-size: 40px
+        line-height: 51px
+        color: $light
+  &__list
+    display: flex
+    list-style: none
+    justify-content: space-between
+    &__item
+      width: 48%
+      padding: 20px 0
+      &:last-of-type
+        padding: 54px
+        background-color: $darkblue
+        color: $light
+    &__info
+      display: flex
+      flex-wrap: wrap
+      &__block
+        width: 50%
+        display: flex
+        align-items: flex-start
+        &:not(:nth-child(n+5))
+          margin-bottom: 80px
+        &__img
+          width: 32px
+          height: 32px
+        &__text
+          margin-left: 28px
+          display: flex
+          flex-direction: column
+          align-items: flex-start
+          &__title
+            font-family: 'Lora-Regular', sans-serif
+            font-weight: 400
+            font-size: 32px
+            line-height: 41px
+            color: $darkblue
+          &__description
+            font-family: 'Lato-Regular', sans-serif
+            font-weight: 400
+            font-size: 16px
+            line-height: 26px
+            color: #9A9A9A

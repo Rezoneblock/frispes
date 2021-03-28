@@ -1,5 +1,29 @@
 /* Portrait tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px)
+  .reasons
+    &__list
+      &__info
+        &__block
+          &__text
+            margin-left: 14px
+            &__title
+              font-size: 24px
+              line-height: 28px
+            &__description
+              font-size: 12px
+              line-height: 22px
+    &__content
+      &__name
+        &__text
+          font-size: 16px
+          line-height: 20px
+      &__heading
+        &__title
+          font-size: 30px
+          line-height: 36px
+        &__description
+          font-size: 16px
+          line-height: 22px
   .header
     &__list
       &__nav-list
@@ -13,6 +37,23 @@
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px)
+  .reasons
+    &__content
+      &__heading
+        &__title
+          font-size: 20px !important
+          line-height: 24px !important
+    &__list
+      &__info
+        &__block
+          &__text
+            margin-left: 14px
+            &__title
+              font-size: 22px
+              line-height: 25px
+            &__description
+              font-size: 12px
+              line-height: 22px
   .our-spaces
     &__swiper
       &-slide
@@ -61,6 +102,20 @@
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px)
+  .reasons
+    &__list
+      flex-direction: column
+      &__info
+        justify-content: center
+        &__block
+          width: 30%
+          &__text
+            margin-left: 10px
+            &__title
+              font-size: 22px
+              line-height: 27px
+      &__item
+        width: 100%
   .our-spaces
     &__content
       &__heading
@@ -150,6 +205,14 @@
 
 /* Landscape phones and smaller */
 @media (max-width: 480px)
+  .reasons
+    &__list
+      &__item
+        &:last-of-type
+          padding: 20px
+      &__info
+        &__block
+          width: 50%
   .our-spaces
     &__swiper
       &-slide

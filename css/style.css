@@ -780,8 +780,140 @@ img {
   background-color: #DD2C00 !important;
 }
 
+.reasons {
+  padding-top: 40px;
+}
+
+.reasons__content__name__text {
+  color: #ffffff;
+}
+
+.reasons__content__name__line {
+  background-color: #ffffff;
+}
+
+.reasons__content__heading {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.reasons__content__heading__description__text {
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.reasons__content__heading__title {
+  font-size: 40px;
+  line-height: 51px;
+  color: #ffffff;
+}
+
+.reasons__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.reasons__list__item {
+  width: 48%;
+  padding: 20px 0;
+}
+
+.reasons__list__item:last-of-type {
+  padding: 54px;
+  background-color: #10375c;
+  color: #ffffff;
+}
+
+.reasons__list__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.reasons__list__info__block {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.reasons__list__info__block:not(:nth-child(n+5)) {
+  margin-bottom: 80px;
+}
+
+.reasons__list__info__block__img {
+  width: 32px;
+  height: 32px;
+}
+
+.reasons__list__info__block__text {
+  margin-left: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.reasons__list__info__block__text__title {
+  font-family: 'Lora-Regular', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 41px;
+  color: #10375c;
+}
+
+.reasons__list__info__block__text__description {
+  font-family: 'Lato-Regular', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #9A9A9A;
+}
+
 /* Portrait tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
+  .reasons__list__info__block__text {
+    margin-left: 14px;
+  }
+  .reasons__list__info__block__text__title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .reasons__list__info__block__text__description {
+    font-size: 12px;
+    line-height: 22px;
+  }
+  .reasons__content__name__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .reasons__content__heading__title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .reasons__content__heading__description {
+    font-size: 16px;
+    line-height: 22px;
+  }
   .header__list__nav-list__item:not(:last-of-type) {
     margin-right: 20px;
   }
@@ -794,6 +926,21 @@ img {
 /* Portrait tablets and medium desktops */
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
+  .reasons__content__heading__title {
+    font-size: 20px !important;
+    line-height: 24px !important;
+  }
+  .reasons__list__info__block__text {
+    margin-left: 14px;
+  }
+  .reasons__list__info__block__text__title {
+    font-size: 22px;
+    line-height: 25px;
+  }
+  .reasons__list__info__block__text__description {
+    font-size: 12px;
+    line-height: 22px;
+  }
   .our-spaces__swiper-slide__space__hidden-content__title {
     font-size: 22px;
     line-height: 26px;
@@ -846,6 +993,30 @@ img {
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
+  .reasons__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .reasons__list__info {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .reasons__list__info__block {
+    width: 30%;
+  }
+  .reasons__list__info__block__text {
+    margin-left: 10px;
+  }
+  .reasons__list__info__block__text__title {
+    font-size: 22px;
+    line-height: 27px;
+  }
+  .reasons__list__item {
+    width: 100%;
+  }
   .our-spaces__content__heading__description {
     text-align: center;
   }
@@ -952,6 +1123,12 @@ img {
 
 /* Landscape phones and smaller */
 @media (max-width: 480px) {
+  .reasons__list__item:last-of-type {
+    padding: 20px;
+  }
+  .reasons__list__info__block {
+    width: 50%;
+  }
   .our-spaces__swiper-slide {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

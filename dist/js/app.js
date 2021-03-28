@@ -11,10 +11,10 @@ burgerMenuBtn.on('click', function () {
 // Nav active item.
 const headerNavItems = $('.header__list__nav-list__item');
 const burgerNavItems = $('.burger-menu__list__item');
-var index = 0;
+var navItemIndex = 0;
 
 function setCurrentItem() {
-  index = $(this).index();
+  navItemIndex = $(this).index();
 
   for (el of headerNavItems) {
     el.classList.remove('header__list__nav-list__item--active');
@@ -24,13 +24,13 @@ function setCurrentItem() {
   }
 
   if ($(this).hasClass('header__list__nav-list__item')) {
-    headerNavItems[index].classList.add('header__list__nav-list__item--active');
-    index += 1;
-    burgerNavItems[index].classList.add('burger-menu__list__item--active');
+    headerNavItems[navItemIndex].classList.add('header__list__nav-list__item--active');
+    navItemIndex += 1;
+    burgerNavItems[navItemIndex].classList.add('burger-menu__list__item--active');
   } else if ($(this).hasClass('burger-menu__list__item')) {
-    burgerNavItems[index].classList.add('burger-menu__list__item--active');
-    index -= 1;
-    headerNavItems[index].classList.add('header__list__nav-list__item--active');
+    burgerNavItems[navItemIndex].classList.add('burger-menu__list__item--active');
+    navItemIndex -= 1;
+    headerNavItems[navItemIndex].classList.add('header__list__nav-list__item--active');
   }
 }
 // Nav active item.
