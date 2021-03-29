@@ -64,6 +64,34 @@ const ourSpaces = new Swiper('.our-spaces__slider', {
 });
 // Our Spaces slider.
 
+// Facilities slider.
+const facilitiesPaginationNames = [
+  'Spacious parking area',
+  'Comfortable spaces',
+  'Cozy cafe',
+  'Child playground',
+  'Outdoor spaces',
+];
+const facilities = new Swiper('.facilities__slider', {
+  direction: 'vertical',
+  allowTouchMove: false,
+  autoplay: true,
+  pagination: {
+    el: '.facilities__slider__pagination',
+    clickable: true,
+    renderBullet: function (index, className) {
+      return (
+        '<span class="facilities__slider__pagination__button ' +
+        className +
+        '">' +
+        facilitiesPaginationNames[index] +
+        '</span>'
+      );
+    },
+  },
+});
+// Facilities slider.
+
 $(document).ready(function () {
   headerNavItems.on('click', setCurrentItem);
   burgerNavItems.on('click', setCurrentItem);

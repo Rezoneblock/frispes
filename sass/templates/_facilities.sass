@@ -1,0 +1,33 @@
+.facilities
+  &__slider
+    overflow: hidden
+    margin-top: 60px
+    &__list
+      position: relative
+      margin-left: auto
+      max-width: 730px
+      max-height: 450px
+    &__pagination
+      bottom: -47% !important
+      left: 0 !important
+      display: flex
+      flex-direction: column
+      &__button
+        width: 293px !important
+        padding: 36px !important
+        font-family: 'Lato-Bold', sans-serif
+        background-color: $light !important
+        font-size: 20px
+        line-height: 24px
+        color: $dark
+        border-radius: 0 !important
+        opacity: 1 !important
+        display: flex !important
+        align-items: center
+        transition: .5s
+        &:hover
+          background-color: $orange !important
+          color: $light
+    .swiper-pagination-bullet-active
+      background-color: $orange !important
+      color: $light

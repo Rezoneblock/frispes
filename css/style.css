@@ -539,6 +539,10 @@ img {
 
 .our-spaces__slider__arrows__arrow {
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .our-spaces__slider__arrows__next {
@@ -889,8 +893,71 @@ img {
   color: #9A9A9A;
 }
 
+.facilities__slider {
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.facilities__slider__list {
+  position: relative;
+  margin-left: auto;
+  max-width: 730px;
+  max-height: 450px;
+}
+
+.facilities__slider__pagination {
+  bottom: -47% !important;
+  left: 0 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.facilities__slider__pagination__button {
+  width: 293px !important;
+  padding: 36px !important;
+  font-family: 'Lato-Bold', sans-serif;
+  background-color: #ffffff !important;
+  font-size: 20px;
+  line-height: 24px;
+  color: #222831;
+  border-radius: 0 !important;
+  opacity: 1 !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.facilities__slider__pagination__button:hover {
+  background-color: #ff5722 !important;
+  color: #ffffff;
+}
+
+.facilities__slider .swiper-pagination-bullet-active {
+  background-color: #ff5722 !important;
+  color: #ffffff;
+}
+
 /* Portrait tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
+  .facilities__slider__list {
+    max-width: 68%;
+  }
+  .facilities__slider__pagination__button {
+    font-size: 14px;
+    line-height: 16px;
+    width: 27% !important;
+    padding: 26px !important;
+  }
   .reasons__list__info__block__text {
     margin-left: 14px;
   }
@@ -926,6 +993,15 @@ img {
 /* Portrait tablets and medium desktops */
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
+  .facilities__slider__list {
+    max-width: 68%;
+  }
+  .facilities__slider__pagination__button {
+    font-size: 14px;
+    line-height: 16px;
+    width: 27% !important;
+    padding: 26px !important;
+  }
   .reasons__content__heading__title {
     font-size: 20px !important;
     line-height: 24px !important;
@@ -993,11 +1069,51 @@ img {
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
+  .facilities__slider__list {
+    max-width: 100%;
+    margin: 0 !important;
+  }
+  .facilities__slider__list__item {
+    width: 100% !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .facilities__slider__list__image {
+    max-width: 550px;
+    max-height: 350px;
+  }
+  .facilities__slider__pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    top: 100% !important;
+  }
+  .facilities__slider__pagination__button {
+    padding: 18px !important;
+    font-size: 14px;
+    line-height: 16px;
+    width: 27% !important;
+    padding: 40px 18px !important;
+  }
   .reasons__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .reasons__list__item:last-of-type {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-bottom: 20px;
   }
   .reasons__list__info {
     -webkit-box-pack: center;
@@ -1123,6 +1239,27 @@ img {
 
 /* Landscape phones and smaller */
 @media (max-width: 480px) {
+  .facilities__slider__pagination {
+    top: 90% !important;
+    max-height: 100px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .facilities__slider__pagination__button {
+    width: 30% !important;
+    padding: 20px 5px !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 12px !important;
+    line-height: 12px !important;
+  }
   .reasons__list__item:last-of-type {
     padding: 20px;
   }
