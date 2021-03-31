@@ -947,8 +947,193 @@ img {
   color: #ffffff;
 }
 
-/* Portrait tablets and medium desktops */
+.gallery__content__heading__title-nowrap {
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.gallery .container {
+  position: relative;
+  max-width: 85%;
+  width: 100%;
+}
+
+.gallery__title {
+  position: absolute;
+  top: 0;
+  left: 55%;
+  z-index: 10;
+}
+
+.gallery__slider {
+  position: relative;
+}
+
+.gallery__slider__arrows {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gallery__slider__arrows__arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.gallery__slider__arrows-next {
+  -webkit-transition: .5s;
+  transition: .5s;
+  margin-left: 23px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.gallery__slider__arrows-next:hover {
+  -webkit-transform: rotateY(180deg) scaleX(1.6);
+          transform: rotateY(180deg) scaleX(1.6);
+}
+
+.gallery__slider__arrows-next:hover * {
+  fill: red;
+}
+
+.gallery__slider__arrows-prev {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.gallery__slider__arrows-prev:hover {
+  -webkit-transform: scaleX(1.4);
+          transform: scaleX(1.4);
+}
+
+.gallery__slider__arrows-prev:hover * {
+  fill: red;
+}
+
+.gallery__slider__list {
+  margin-left: 340px;
+  height: 600px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gallery__slider__list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.gallery__slider__list .swiper-slide-active {
+  width: 450px !important;
+  height: 600px !important;
+}
+
+.gallery__slider__list .swiper-slide-active img {
+  width: 450px !important;
+  height: 600px !important;
+}
+
+.gallery__slider__list__image {
+  width: 350px;
+  height: 350px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.users__content__heading {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.users__content__heading__description {
+  text-align: center;
+}
+
+.users__content__heading__description__text {
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+.users__list {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.users__list__item {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.users__list__item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media (min-width: 1200px) and (max-width: 1870px) {
+  .gallery__content__heading__title {
+    font-size: 36px;
+    line-height: 44.2px;
+  }
+  .gallery__slider__list {
+    margin-left: 100px;
+  }
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {
+  .users__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .users__list__item {
+    padding: 0 30px;
+  }
+  .gallery__title {
+    left: 2%;
+  }
+  .gallery__slider__list {
+    margin-left: 520px;
+  }
+  .gallery__slider__list .swiper-slide-active {
+    width: 250px !important;
+  }
+  .gallery__slider__list .swiper-slide-active img {
+    height: 350px !important;
+  }
   .facilities__slider__list {
     max-width: 68%;
   }
@@ -990,9 +1175,27 @@ img {
   }
 }
 
-/* Portrait tablets and medium desktops */
-/* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
+  .users__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .users__list__item {
+    padding: 0 30px;
+  }
+  .gallery__title {
+    left: 2%;
+  }
+  .gallery__slider__list {
+    margin-left: 520px;
+  }
+  .gallery__slider__list .swiper-slide-active {
+    width: 250px !important;
+  }
+  .gallery__slider__list .swiper-slide-active img {
+    height: 350px !important;
+  }
   .facilities__slider__list {
     max-width: 68%;
   }
@@ -1060,15 +1263,53 @@ img {
   }
 }
 
-/* Portrait tablets and small desktops */
 @media (min-width: 768px) {
   .burger-menu {
     display: none;
   }
 }
 
-/* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
+  .users {
+    margin-top: -100px;
+  }
+  .users__list {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .users__list__item {
+    padding: 0;
+    width: 48%;
+    text-align: center;
+  }
+  .gallery {
+    padding-bottom: 0 !important;
+  }
+  .gallery__content__heading__title {
+    font-size: 36px !important;
+    line-height: 36px !important;
+  }
+  .gallery__title {
+    left: 2%;
+  }
+  .gallery__slider__list {
+    margin-left: auto !important;
+  }
+  .gallery__slider__list__item {
+    height: 450px !important;
+    width: 250px !important;
+  }
+  .gallery__slider__list__image {
+    height: 250px;
+  }
+  .gallery__slider__list .swiper-slide-active {
+    width: 250px !important;
+    height: 450px !important;
+  }
+  .gallery__slider__list .swiper-slide-active img {
+    height: 250px !important;
+  }
   .facilities__slider__list {
     max-width: 100%;
     margin: 0 !important;
@@ -1202,8 +1443,14 @@ img {
   }
 }
 
-/* Landscape phones and portrait tablets */
 @media (max-width: 550px) {
+  .gallery__content__heading__title {
+    font-size: 32px !important;
+    line-height: 32px !important;
+  }
+  .gallery__slider__arrows {
+    margin-top: 20px;
+  }
   .section {
     padding-bottom: 60px;
   }
@@ -1237,8 +1484,11 @@ img {
   }
 }
 
-/* Landscape phones and smaller */
 @media (max-width: 480px) {
+  .gallery__content__heading__title {
+    font-size: 24px !important;
+    line-height: 24px !important;
+  }
   .facilities__slider__pagination {
     top: 90% !important;
     max-height: 100px;
@@ -1331,6 +1581,4 @@ img {
     padding: 6px 18px;
   }
 }
-
-/* Landscape phones and smaller */
 /*# sourceMappingURL=style.css.map */

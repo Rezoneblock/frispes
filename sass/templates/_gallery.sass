@@ -1,0 +1,58 @@
+.gallery
+  &__content
+    &__heading
+      &__title
+        &-nowrap
+          font-family: inherit
+          white-space: nowrap
+  .container
+    position: relative
+    max-width: 85%
+    width: 100%
+  &__title
+    position: absolute
+    top: 0
+    left: 55%
+    z-index: 10
+  &__slider
+    position: relative
+    &__arrows
+      margin-top: 40px
+      display: flex
+      align-items: center
+      &__arrow
+        display: flex
+        cursor: pointer
+        user-select: none
+      &-next
+        transition: .5s
+        margin-left: 23px
+        transform: rotateY(180deg)
+        &:hover
+          transform: rotateY(180deg) scaleX(1.6)
+          *
+            fill: red
+      &-prev
+        transition: .5s
+        &:hover
+          transform: scaleX(1.4)
+          *
+            fill: red
+    &__list
+      margin-left: 340px
+      height: 600px !important
+      display: flex
+      &__item
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+      .swiper-slide-active
+        width: 450px !important
+        height: 600px !important
+        img
+          width: 450px !important
+          height: 600px !important
+      &__image
+        width: 350px
+        height: 350px
+        transition: .4s

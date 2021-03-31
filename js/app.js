@@ -92,6 +92,31 @@ const facilities = new Swiper('.facilities__slider', {
 });
 // Facilities slider.
 
+// Gallery slider.
+const gallery = new Swiper('.gallery__slider', {
+  direction: 'horizontal',
+  loop: true,
+  watchOverflow: true,
+  navigation: {
+    prevEl: '.gallery__slider__arrows-prev',
+    nextEl: '.gallery__slider__arrows-next',
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    0: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      initialSlide: 0,
+    },
+    767: {
+      slidesPerView: 3.5,
+      spaceBetween: 30,
+      initialSlide: 1,
+    },
+  },
+});
+// Gallery slider.
+
 $(document).ready(function () {
   headerNavItems.on('click', setCurrentItem);
   burgerNavItems.on('click', setCurrentItem);
