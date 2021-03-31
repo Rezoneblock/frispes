@@ -102,7 +102,6 @@ const gallery = new Swiper('.gallery__slider', {
     nextEl: '.gallery__slider__arrows-next',
   },
   breakpoints: {
-    // when window width is >= 320px
     0: {
       slidesPerView: 2,
       spaceBetween: 20,
@@ -116,6 +115,30 @@ const gallery = new Swiper('.gallery__slider', {
   },
 });
 // Gallery slider.
+
+// Reviews slider.
+const reviews = new Swiper('.reviews__slider', {
+  direction: 'horizontal',
+  width: 445,
+  spaceBetween: 30,
+  scrollbar: {
+    el: '.reviews__slider__scrollbar',
+    draggable: true,
+  },
+  navigation: {
+    prevEl: '.reviews__slider__arrows-prev',
+    nextEl: '.reviews__slider__arrows-next',
+  },
+  breakpoints: {
+    0: {
+      width: 300,
+    },
+    550: {
+      width: 445,
+    },
+  },
+});
+// Reviews slider.
 
 $(document).ready(function () {
   headerNavItems.on('click', setCurrentItem);

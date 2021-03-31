@@ -151,11 +151,15 @@
   .intro
     &__slider
       box-shadow: none
-
 @media (min-width: 768px)
   .burger-menu
     display: none
 @media (max-width: 767px)
+  .reviews
+    &__slider
+      margin-left: 15px !important
+      &__scrollbar
+        margin-left: 50% !important
   .users
     margin-top: -100px
     &__list
@@ -283,8 +287,25 @@
           display: none
       &__user
         font-size: 16px
-
 @media (max-width: 550px)
+  .reviews
+    .container
+      flex-direction: column
+    &__slider
+      margin-left: 15px !important
+      &__scrollbar
+        margin-left: 50% !important
+      &__list
+        &__item
+          width: 300px !important
+        &__text
+          max-width: 230px
+          font-size: 12px
+          line-height: 20px
+      &__arrows
+        margin-top: 30px
+        margin-left: auto
+        margin-right: auto
   .gallery
     &__content
       &__heading
