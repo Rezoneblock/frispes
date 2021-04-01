@@ -1,0 +1,85 @@
+.footer
+  padding: 56px 0
+  background-color: $darkblue
+  display: flex
+  .container
+    display: flex
+    justify-content: space-between
+  &__links
+    margin-top: 30px
+    display: flex
+    flex-direction: column
+    text-align: left
+    &__title
+      margin-bottom: 24px
+      font-family: 'Lato-Medium', sans-serif
+      font-weight: 500
+      font-size: 20px
+      line-height: 30px
+      color: $light
+      opacity: .5
+      transition: .5s
+    &__link
+      font-family: 'Lato-Regular', sans-serif
+      font-weight: 400
+      font-size: 16px
+      line-height: 26px
+      color: $light
+      text-decoration: none
+      transition: .5s
+      max-width: 212px
+      &:hover
+        opacity: .5
+      &--bold
+        font-weight: 700
+      &:not(:last-of-type)
+        margin-bottom: 9px
+  &__info
+    height: 100%
+    margin-right: 60px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    text-align: left
+    &__title
+      font-family: 'Lora-Bold', sans-serif
+      font-weight: 700
+      font-size: 52px
+      line-height: 66px
+      color: $light
+      transition: .5s
+    &__description
+      margin-top: 16px
+      margin-bottom: 24px
+      max-width: 255px
+      font-family: 'Lato-Regular', sans-serif
+      font-weight: 400
+      font-size: 16px
+      line-height: 26px
+      color: #F8F8F8
+      opacity: .85
+      transition: .5s
+    &__links
+      display: flex
+      align-items: flex-start
+      max-width: 110px
+      &__link
+        display: flex
+        justify-content: center
+        align-items: center
+        text-decoration: none
+        width: 24px
+        height: 24px
+        transition: .5s
+        &:hover > &__icon
+          fill: $orange
+        &:not(:last-of-type)
+          margin-right: 16px
+        &__icon
+          width: 24px
+          height: 24px
+          fill: $light
+          transition: .5s
+          path
+            width: 24px
+            height: 24px

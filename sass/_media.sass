@@ -31,6 +31,19 @@
       &__list
         margin-left: 100px
 @media (min-width: 992px) and (max-width: 1199px)
+  .footer
+    &__info
+      margin-right: 0
+      &__title
+        font-size: 46px
+        line-height: 52px
+      &__description
+        font-size: 14px
+        line-height: 22px
+    &__links
+      &__link
+        font-size: 12px
+        line-height: 22px
   .news
     &__list
       &__item
@@ -122,6 +135,21 @@
     &__slider
       box-shadow: none
 @media (min-width: 768px) and (max-width: 991px)
+  .footer
+    .container
+      flex-wrap: wrap
+    &__info
+      margin-right: 0
+      &__title
+        font-size: 46px
+        line-height: 52px
+      &__description
+        font-size: 14px
+        line-height: 22px
+    &__links
+      &__link
+        font-size: 12px
+        line-height: 22px
   .news
     &__list
       &__item
@@ -240,6 +268,24 @@
   .burger-menu
     display: none
 @media (max-width: 767px)
+  .footer
+    .container
+      flex-wrap: wrap
+    &__info
+      width: 100%
+      margin-right: 0
+      &__title
+        font-size: 46px
+        line-height: 52px
+      &__description
+        font-size: 14px
+        line-height: 22px
+    &__links
+      margin-right: 0
+      width: 48%
+      &__link
+        font-size: 12px
+        line-height: 22px
   .news
     &__title
       flex-direction: column
@@ -559,3 +605,12 @@
     &__list
       &__user
         padding: 6px 18px
+@media screen and ( max-width: 320px  )
+  .news
+    &__list
+      &__item
+        width: 90% !important
+  .quest-answ
+    &__list
+      &__item
+        width: 90% !important
