@@ -9,6 +9,13 @@
       &__list
         margin-left: 100px
 @media (min-width: 992px) and (max-width: 1199px)
+  .quest-answ
+    &__list
+      flex-direction: column
+      align-items: center
+      &__item
+        &:not(:last-of-type)
+          margin-bottom: 35px
   .users
     &__list
       justify-content: center
@@ -67,8 +74,14 @@
   .intro
     &__slider
       box-shadow: none
-
 @media (min-width: 768px) and (max-width: 991px)
+  .quest-answ
+    &__list
+      flex-direction: column
+      align-items: center
+      &__item
+        &:not(:last-of-type)
+          margin-bottom: 35px
   .users
     &__list
       justify-content: center
@@ -155,6 +168,13 @@
   .burger-menu
     display: none
 @media (max-width: 767px)
+  .quest-answ
+    &__list
+      flex-direction: column
+      align-items: center
+      &__item
+        &:not(:last-of-type)
+          margin-bottom: 35px
   .reviews
     &__slider
       margin-left: 15px !important
@@ -288,6 +308,14 @@
       &__user
         font-size: 16px
 @media (max-width: 550px)
+  .quest-answ
+    &__list
+      &__title
+        font-size: 18px
+        line-height: 22px
+      &__item
+        max-width: 280px
+        height: 120px
   .reviews
     .container
       flex-direction: column
